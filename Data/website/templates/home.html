@@ -1,1 +1,5 @@
-hello world
+<h1> All the members</h1>
+{% for i in mem%}
+ <p> {{i.first_name}}  {{i.last_name}} </p>
+ <p> {{i.email}}</p>
+ {% endfor%}
