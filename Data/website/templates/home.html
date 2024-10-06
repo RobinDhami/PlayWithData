@@ -1,5 +1,16 @@
-<h1> All the members</h1>
-{% for i in mem%}
- <p> {{i.first_name}}  {{i.last_name}} </p>
- <p> {{i.email}}</p>
- {% endfor%}
+{% extends 'base.html' %}
+
+{% block title %}All Members{% endblock %}
+
+{% block content %}
+<h1>All the Members</h1>
+<ul>
+    {% for i in mem %}
+        <li>
+            {{ i.first_name }} {{ i.last_name }}<br>
+            Email: {{ i.email }}<br>
+            Age: {{ i.age }}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
